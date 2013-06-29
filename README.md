@@ -1,4 +1,4 @@
 QuickRightsSearch
 =================
 
-Quick search patient rights
+Quick and dirty search patient rights application
