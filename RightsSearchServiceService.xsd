@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3.1-hudson-581-SNAPSHOT. --><xs:schema xmlns:tns="http://rightsearch.nhso.go.th/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rightsearch.nhso.go.th/">
+
+<xs:element name="seacrhByPid" type="tns:seacrhByPid"></xs:element>
+
+<xs:element name="seacrhByPidAndDate" type="tns:seacrhByPidAndDate"></xs:element>
+
+<xs:element name="seacrhByPidAndDateResponse" type="tns:seacrhByPidAndDateResponse"></xs:element>
+
+<xs:element name="seacrhByPidAndDates" type="tns:seacrhByPidAndDates"></xs:element>
+
+<xs:element name="seacrhByPidAndDatesResponse" type="tns:seacrhByPidAndDatesResponse"></xs:element>
+
+<xs:element name="seacrhByPidResponse" type="tns:seacrhByPidResponse"></xs:element>
+
+<xs:element name="seacrhByPids" type="tns:seacrhByPids"></xs:element>
+
+<xs:element name="seacrhByPidsResponse" type="tns:seacrhByPidsResponse"></xs:element>
+
+<xs:complexType name="seacrhByPidAndDate">
+<xs:sequence>
+<xs:element name="pid" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="date" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPidAndDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:hRightData" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hRightData">
+<xs:complexContent>
+<xs:extension base="tns:rightData">
+<xs:sequence>
+<xs:element name="dateSelect" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="deathDate" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="periodId" type="xs:long" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="rightData">
+<xs:complexContent>
+<xs:extension base="tns:rightData2">
+<xs:sequence></xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="rightData2">
+<xs:sequence>
+<xs:element name="amphurName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="birthdate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="cardId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="chat" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="countSelect" type="xs:int" minOccurs="0"></xs:element>
+<xs:element name="expdate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="fname" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hmain" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hmainName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hmainOp" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hmainOpName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hsub" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="hsubName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="lname" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="maininscl" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="maininsclMain" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="maininsclName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="mastercupId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="moo" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="moobanName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="nation" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newDateRegister" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="newExpdate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newHmain" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newHmainName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newHmainOp" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newHmainOpName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newHsub" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newHsubName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newMaininscl" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newMaininsclName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newMastercupId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newPaidModel" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newPurchaseprovince" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newPurchaseprovinceName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newStaffname" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newStartdate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newSubinscl" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newSubinsclName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newTypeRegister" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newTypeRegisterDesc" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="paidModel" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="personId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="primaryprovince" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="provinceName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="purchaseprovince" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="purchaseprovinceName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="sex" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="startdate" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="startdateSss" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="status" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="subinscl" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="subinsclName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="title" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="titleName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="tumbonName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="wsDataSource" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="wsDateReuest" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="wsOperationMillisec" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="wsStatus" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="wsid" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="wsidBatch" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPidAndDates">
+<xs:sequence>
+<xs:element name="pids" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="date" type="xs:dateTime" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPidAndDatesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rightData" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPids">
+<xs:sequence>
+<xs:element name="pids" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPidsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rightData" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPid">
+<xs:sequence>
+<xs:element name="pid" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seacrhByPidResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rightData" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
